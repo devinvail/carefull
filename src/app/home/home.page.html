@@ -1,8 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button shape="round" size="small" style="--background: grey; --color: white" (click)="transition()">Transition</ion-button>
+    </ion-buttons>
 
 
+  </ion-toolbar>
+</ion-header>
 <ion-content [fullscreen]="true">
 
-  <div class="center">
-<ng-lottie  [options]="options"></ng-lottie>
-</div>
+  <div *ngIf="flower" class="center">
+    <ng-lottie  [options]="options1"></ng-lottie>
+  </div>
+  <div *ngIf="!flower" class="center">
+    <ng-lottie  [options]="options2"></ng-lottie>
+  </div>
 </ion-content>

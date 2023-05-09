@@ -7,14 +7,20 @@ import { AnimationOptions } from 'ngx-lottie';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  happyFlowerPath = "../../assets/lottie/MAIN.json";
+  transitionPath = "../../assets/lottie/fireworks.json";
   data: any;
-  options: AnimationOptions = {
-    path: "../../assets/lottie/MAIN.json",
-
-
+  flower = true;
+  options1: AnimationOptions = {
+    path: this.happyFlowerPath,
+  };
+  options2: AnimationOptions = {
+    path: this.transitionPath,
   };
   constructor() {}
 
-
+  public transition() {
+    this.flower = !this.flower;
+  }
 
 }
